@@ -1,7 +1,7 @@
 import React from 'react';
-
+import './index.scss';
 import {sum} from './sun';
 
 React.createElement('div', null);
 
-sum(1, 2);
+console.log(sum(1, 2));

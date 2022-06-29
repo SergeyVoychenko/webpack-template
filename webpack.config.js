@@ -8,7 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: '[name]-[fullhash].js',
         clean: true,
-        publicPath: "/",
+        publicPath: "./",
     },
     module: {
         rules: [
@@ -30,12 +30,15 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     // Creates `style` nodes from JS strings
-                    //   "style-loader",
+                    // "style-loader",
                     MiniCssExtractPlugin.loader,
                     // Translates CSS into CommonJS
                     "css-loader",
                     // Compiles Sass to CSS
                     "sass-loader",
+
+                    'postcss-loader',
+
                 ],
             },
         ]
@@ -45,7 +48,7 @@ module.exports = {
             template: "./src/index.html"
         }),
         new MiniCssExtractPlugin(
-            {filename: '[name]-[fullhash].css'}
+            { filename: '[name]-[fullhash].css' }
         )
     ],
     devServer: {

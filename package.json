@@ -13,8 +13,9 @@
     "url": "git+https://github.com/SergeyVoychenko/webpack-template.git"
   },
   "browserslist": [
-    "> 1%",
-    "last 3 version"
+    "last 3 version",
+    "not IE > 0",
+    "not OperaMini > 0"
   ],
   "author": "",
   "license": "ISC",
